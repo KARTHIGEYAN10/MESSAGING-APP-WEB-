@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useSocketContext } from "../context/SocketContext";
-import useConversation from "../zustand/useConversation"; // Fix import (remove `{}`)
+import useConversation from "../zustand/useConversation"; 
 import notificationsound from "../assets/sounds/chatsound.mp3"
 const useListenMessages = () => {
   const { socket } = useSocketContext();
@@ -19,4 +19,4 @@ const useListenMessages = () => {
   
 };
 
-export default useListenMessages; // ✅ Correct way for ES modules
+export default useListenMessages; 

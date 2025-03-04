@@ -9,7 +9,7 @@ export const useSocketContext = () => {
 };
 
 export const SocketContextProvider = ({ children }) => {
-  const socketRef = useRef(null); // Use a ref to prevent unnecessary re-renders
+  const socketRef = useRef(null); 
   const [onlineUsers, setOnlineUsers] = useState([]);
   const { authUser } = useAuthContext();
 
@@ -35,7 +35,7 @@ export const SocketContextProvider = ({ children }) => {
         socketRef.current = null;
       }
     }
-  }, [authUser]); // Ensure authUser is in dependency array
+  }, [authUser]); 
 
   return (
     <SocketContext.Provider value={{ socket: socketRef.current, onlineUsers }}>

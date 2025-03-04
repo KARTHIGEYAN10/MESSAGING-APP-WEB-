@@ -18,11 +18,11 @@ const SignUp = () => {
         e.preventDefault();
         console.log("Form Inputs:", inputs);
 
-        const res = await signup(inputs); // ✅ Get response from signup
+        const res = await signup(inputs); 
 
         if (res) {
             console.log("Signup Successful:", res);
-            // You can redirect the user or show success message
+            
         } else {
             console.log("Signup Failed");
         }

@@ -47,7 +47,6 @@ router.post("/login", async (req, res) => {
     try {
         const { username, password } = req.body;
 
-        // 🔹 Fix: Add 'await' to fetch the user correctly
         const user = await User.findOne({ username });
 
         if (!user) {

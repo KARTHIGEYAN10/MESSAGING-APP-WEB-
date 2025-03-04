@@ -1,6 +1,6 @@
-const { Server } = require("socket.io"); // CommonJS import for socket.io
-const http = require("http"); // CommonJS import for http
-const express = require("express"); // CommonJS import for express
+const { Server } = require("socket.io"); 
+const http = require("http"); 
+const express = require("express"); 
 
 
 const app = express();
@@ -8,7 +8,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
     cors: {
-        origin: ["http://localhost:4000"], // Allow frontend access
+        origin: ["http://localhost:4000"], 
         methods: ["GET", "POST"],
     },
 });
@@ -30,4 +30,4 @@ io.on("connection", (socket) => {
     });
 });
 
-module.exports = { app, io, server, getReceiverSocketId };// Use export instead of module.exports
+module.exports = { app, io, server, getReceiverSocketId };

@@ -9,7 +9,7 @@ const useSignup = () => {
     const signup = async (inputs) => {
         const success = handleInputErrors(inputs);
         if (!success) {
-            return null; // Return null if validation fails
+            return null; 
         }
 
         setLoading(true);
@@ -21,11 +21,11 @@ const useSignup = () => {
             toast.success("Signup successful!");
             localStorage.setItem("chat-user",JSON.stringify(data))
             setAuthUser(data)
-            return data; // ✅ Return the response data
+            return data; 
         } catch (error) {
             toast.error(error.response?.data?.error || "Signup failed!");
             console.log(error)
-            return null; // Return null on error
+            return null; 
         } finally {
             setLoading(false);
         }

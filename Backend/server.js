@@ -14,7 +14,7 @@ dotenv.config();
 
 const port = process.env.PORT || 3000;
 
-// ✅ No need to redeclare __dirname
+
 const frontendPath = path.join(__dirname, "../frontend/dist");
 
 app.use(express.json());
@@ -35,7 +35,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/message", messageroute);
 app.use("/api/users", userroutes);
 
-// ✅ Serve frontend correctly
+
 app.use(express.static(frontendPath));
 app.get("*", (req, res) => {
     res.sendFile(path.join(frontendPath, "index.html"));
