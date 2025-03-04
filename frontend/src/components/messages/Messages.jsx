@@ -5,7 +5,7 @@ import MessageSkeleton from "../skeletons/MessageSkeleton";
 import useListenMessages from "../../hooks/useListenMessages";
 
 const Messages = () => {
-  const { messages = [], loading } = useGetMessages(); // ✅ Ensure messages is always an array
+  const { messages, loading } = useGetMessages(); // ✅ Ensure messages is always an array
   useListenMessages();
   const lastMessageRef = useRef();
 

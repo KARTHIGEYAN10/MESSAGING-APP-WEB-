@@ -13,7 +13,7 @@ if (!MONGO_URI) {
 
 const connectToMongoDB = async () => {
     try {
-        await mongoose.connect(MONGO_URI);
+        await mongoose.connect(MONGO_URI);;
         console.log("✅ Connected to MongoDB");
     } catch (err) {
         console.error("❌ MongoDB connection error:", err);
